@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200&family=Gothic+A1:wght@300&family=Merriweather:wght@300&family=Nunito:wght@300&family=Roboto:ital,wght@0,700;1,100&family=Ubuntu&display=swap');
+
+body {
+    background-image: url(../html/img/noite2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Gothic A1', sans-serif;
+}
+#navegation-menu li>a{
+    color: rgb(211, 198, 198);
+    width: 2em;
+    padding: 0.4em;
+    border-bottom: 2px solid #1d1b1b;
+}
+li>a:hover{
+    cursor: pointer;
+    color: #1d1b1b;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.menu-mobile {
+    display: none;
+}
+
+nav>button{
+    position: relative;
+    right: 0;
+    padding: 0.5em;
+    color: rgb(192, 181, 181);
+    background-color: black;
+    font-size: 1.3em;
+    border-bottom: 2px solid rgb(192, 181, 181);
+}
+nav>button:hover{
+    background-color: rgb(136, 129, 121);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+  
+.cabeçalho {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-logo{
+    margin-left: 1.5em;
+}
+.navegation-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 3em;
+}
+.navegation-menu-content{
+    margin: 0.5em;
+    padding: 0.2em;
+}
+.cont-menu {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.rodape {
+    height: 9em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: nowrap;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    align-items: center;
+}
+.conteudo-rodape {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1.2em;
+    color: white;
+}
+.lista-rodape{
+    display: flex;
+    padding: 1em;
+    align-items: center;
+}
+.conteudo-lista{
+    padding: 1em;
+    list-style: none;
+    align-items: center;
+}
+.lista-rodape li>a{
+    padding: 1.1em;
+    font-size: 1.2em;
+    color: white;
+}
+/*Mobile menu*/
+@media screen and (max-width: 610px){
+    .menu-mobile{
+        display: block;
+    }
+    .cont-menu{
+        display: none;
+    }
+    .navegation-menu-content{
+        width: 100%;
+    }
+    #navegation-menu.active .cont-menu{ /*Libera a aba do nav o tirando do "escondido"*/
+        position: absolute;
+        right: 0;
+        margin-bottom: 0.5em;
+        padding-bottom: 2.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        right: 6em;
+        top: 6em;
+        text-transform: uppercase;
+        font-size: 1em;
+        background-color: rgb(117, 101, 101);
+        width: 50%;
+        height: 70%;
+        border-radius: 10px;
+    }
+    #navegation-menu.active a{
+        padding: 1.5em 4.6em;
+    }
+}
